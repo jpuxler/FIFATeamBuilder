@@ -5,7 +5,7 @@ import UI.Frame.MainFrame;
 public class FIFATeamBuilder {
 	
 	public static void main(String[] args) {
-		MainFrame main = new MainFrame(800, 300);
+		MainFrame main = new MainFrame(800, 350);
 	}
 
 }

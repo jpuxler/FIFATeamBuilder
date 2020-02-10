@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.MenuBar;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
@@ -12,6 +13,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
@@ -29,6 +33,9 @@ public class MainFrame extends JFrame{
 	private JPanel panel;
 	private Border border;
 	private JLabel label;
+	private JMenuBar menuBar;
+	private JMenu menu;
+	private JMenuItem menuItem;
 	private DefaultListModel<String> model_list_eins, model_list_zwei;
 	private JList list_team_eins, list_team_zwei;
 	private JButton generatePlayer1, generatePlayer2;
@@ -41,6 +48,23 @@ public class MainFrame extends JFrame{
 	}
 	
 	private void createFrame() {
+		
+		menuBar = new JMenuBar();
+		
+		setJMenuBar(menuBar);
+		
+		menu = new JMenu("Spiel");
+		
+		menuBar.add(menu);
+		
+		menuItem = new JMenuItem("Neues Spiel");
+		menuItem.addActionListener(e -> {
+			model_list_eins.clear();
+			model_list_zwei.clear();
+		});
+		menu.add(menuItem);
+		
+		
 		border = BorderFactory.createLineBorder(Color.black);
 		setLayout(new GridLayout(1, 2));
 		
