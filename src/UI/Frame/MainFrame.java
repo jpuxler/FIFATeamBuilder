@@ -192,6 +192,7 @@ public class MainFrame extends JFrame{
 		playerPool.add("Ter Stegen - Barcerlona" + tw);
 		playerPool.add("Ederson - Man City" + tw);
 		playerPool.add("Allison - Liverpool" + tw);
+		playerPool.add("Joker" + tw);
 	}
 	
 	private void addPlayerToList(DefaultListModel<String> list) {
