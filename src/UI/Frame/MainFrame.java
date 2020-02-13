@@ -118,24 +118,160 @@ public class MainFrame extends JFrame{
 	private void fillPlayerPool() {
 		// STÜRMER
 		playerPool.add("Messi - Barcelona" + st);
-		playerPool.add("C. Ronaldo - Inter Mailand" + st);
-
+		playerPool.add("C. Ronaldo -  Juventus" + st);
+		playerPool.add("Gameiro - Valencia" + st);
+		playerPool.add("Lukaku - Inter Mailand" + st);
+		playerPool.add("Neymar - PSG" + st);
+		playerPool.add("Joker" + st);
+		playerPool.add("E. Hazard - Real Madrid" + st);
+		playerPool.add("Mbappe - PSG" + st);
+		playerPool.add("Rebic - AC Mailand" + st);
+		playerPool.add("Cavani - PSG" + st);
+		playerPool.add("Aubameyang - Arsenal" + st);
+		playerPool.add("Ibrah - AC Mailand" + st);
+		playerPool.add("Dybala - Juventus" + st);
+		playerPool.add("Lewandowski - Bayern" + st);
+		playerPool.add("Countiho - Bayern" + st);
+		playerPool.add("Sancho - BVB" + st);
+		playerPool.add("Haaland - BVB" + st);
+		playerPool.add("Werner - RB Leipzig" + st);
+		playerPool.add("Volland - Leverkusen" + st);
+		playerPool.add("Poulsen - RB Leipzig" + st);
 		
 		//MITTELFELD
 		playerPool.add("Pogba - Manchester United" + mi);
+		playerPool.add("Reus - BVB" + mi);
+		playerPool.add("KBD - Man City" + mi);
+		playerPool.add("Iniesta - Vissel" + mi);
+		playerPool.add("Havertz - Leverkusen" + mi);
+		playerPool.add("Müller - Bayern" + mi);
+		playerPool.add("Casemiro - Real Madrid" + mi);
+		playerPool.add("Foden - Man City" + mi);
+		playerPool.add("De Jong - Barcelona" + mi);
+		playerPool.add("Kante - Chelsea" + mi);
+		playerPool.add("Aouar - Lyon" + mi);
+		playerPool.add("Gomez - Atlanta B" + mi);
+		playerPool.add("Allan - Neapel" + mi);
+		playerPool.add("Fabinho - Liverpool" + mi);
+		playerPool.add("James Rodriguez - Real Madrid" + mi);
+		playerPool.add("Verrati - PSG" + mi);
+		playerPool.add("Thiago - Bayern" + mi);
+		playerPool.add("Özil - Arsenal" + mi);
+		playerPool.add("Joker" + mi);
+		playerPool.add("Khedira - Juventus" + mi);
 		
 		// Verteidiger 
 		playerPool.add("Van Dijk - Liverpool" + ve);
+		playerPool.add("Joker" + ve);
+		playerPool.add("Sergio Ramos - Real Madrid" + ve);
+		playerPool.add("Varane - Real Madrid" + ve);
+		playerPool.add("Pique - Barcelona" + ve);
+		playerPool.add("Hummels - BVB" + ve);
+		playerPool.add("Hernandez - Bayern" + ve);
+		playerPool.add("Lenglet - Barcelona" + ve);
+		playerPool.add("Tah - Lervekusen" + ve);
+		playerPool.add("Süle - Bayern" + ve);
+		playerPool.add("Stones - Man City" + ve);
+		playerPool.add("Maguire" + ve);
+		playerPool.add("Marcelo - Real Madrid" + ve);
+		playerPool.add("Robertson - Liverpool" + ve);
+		playerPool.add("Schulz - BVB" + ve);
+		playerPool.add("Bernat - PSG" + ve);
+		playerPool.add("Dani Alves - PSG" + ve);
+		playerPool.add("Walker - Man City" + ve);
+		playerPool.add("Kimmich - Bayern" + ve);
+		playerPool.add("Danny Da Costa - Frankfurt" + ve);
+		
 		
 		// TORWART
-		playerPool.add("Manuel Neuer - Bayern " + tw);
+		playerPool.add("Manuel Neuer - Bayern" + tw);
+		playerPool.add("Trapp - Frankfurt" + tw);
+		playerPool.add("Lloris - Tottenham" + tw);
+		playerPool.add("Courtois - Real Madrid" + tw);
+		playerPool.add("Onana - Ajax" + tw);
+		playerPool.add("Ter Stegen - Barcerlona" + tw);
+		playerPool.add("Ederson - Man City" + tw);
+		playerPool.add("Allison - Liverpool" + tw);
 	}
 	
 	private void addPlayerToList(DefaultListModel<String> list) {
+		
+		boolean add = true;
+		
 		if(list.getSize() < 11) {
 			
 			int index = (int)(Math.random() * playerPool.size());
-			list.addElement(playerPool.get(index));			
+			
+			String player = playerPool.get(index);
+			
+			System.out.println(player);
+
+			if(model_list_eins.isEmpty() && model_list_zwei.getSize() == 1 && list == model_list_eins) {
+				System.out.println("case 1");
+
+					list.addElement(player);
+				
+			}else if(model_list_zwei.isEmpty() && model_list_eins.getSize() == 1 && list == model_list_zwei) {
+
+				System.out.println("case 2");
+					list.addElement(player);
+				
+			}else if(model_list_eins.isEmpty() && model_list_zwei.isEmpty()) {
+
+				System.out.println("case 3");
+				list.addElement(player);
+			}else if(model_list_eins.getSize() > 0 && model_list_zwei.isEmpty()) {
+
+				System.out.println("case 4");
+				for(int i = 0; i < model_list_eins.size(); i++) {
+					if(player.equals(model_list_eins.get(i)))
+						add = false;
+				}
+				
+				System.out.println(add);
+
+				if(add == true)
+					list.addElement(player);
+			}
+			else if(model_list_zwei.getSize() > 0 && model_list_eins.isEmpty()) {
+
+				System.out.println("case 5");
+				for(int j = 0; j < model_list_zwei.size(); j++) {
+					if(player.equals(model_list_zwei.get(j)))
+						add = false;
+				}
+				
+				System.out.println(add);
+				
+				if(add == true)
+					list.addElement(player);
+			}
+			else{
+
+				System.out.println("case 6");
+				for(int i = 0; i < model_list_eins.size(); i++) {
+					if(player.equals(model_list_eins.get(i)))
+						add = false;
+				}
+				
+				for(int j = 0; j < model_list_zwei.size(); j++) {
+					if(player.equals(model_list_zwei.get(j)))
+						add = false;
+				}
+				
+				if(add == true)
+					list.addElement(player);
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
 		}
 		
 	}
