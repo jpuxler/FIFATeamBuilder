@@ -137,6 +137,18 @@ public class MainFrame extends JFrame{
 		playerPool.add("Werner - RB Leipzig" + st);
 		playerPool.add("Volland - Leverkusen" + st);
 		playerPool.add("Poulsen - RB Leipzig" + st);
+		playerPool.add("Rashford - Manchester United" + st);
+		playerPool.add("Griezmann - Barcelona" + st);
+		playerPool.add("Martinez - Inter Mailand" + st);
+		playerPool.add("Son - Tottenham" + st);
+		playerPool.add("Agüero - Man City" + st);
+		playerPool.add("Firmino - Liverpool" + st);
+		playerPool.add("Insigne - Neapel" + st);
+		playerPool.add("Mane - Liverpool" + st);
+		playerPool.add("Promes - Ajax" + st);
+		playerPool.add("B. Silva - Man City" + st);
+		playerPool.add("Pepe - Arsenal" + st);
+		
 		
 		//MITTELFELD
 		playerPool.add("Pogba - Manchester United" + mi);
@@ -159,6 +171,18 @@ public class MainFrame extends JFrame{
 		playerPool.add("Özil - Arsenal" + mi);
 		playerPool.add("Joker" + mi);
 		playerPool.add("Khedira - Juventus" + mi);
+		playerPool.add("Modric - Real Madrid" + mi);
+		playerPool.add("Kroos - Real Madrid" + mi);
+		playerPool.add("Thiago - Bayern" + mi);
+		playerPool.add("Rodri - Man City" + mi);
+		playerPool.add("Ziyech - Ajax" + mi);
+		playerPool.add("Alli - Tottenham" + mi);
+		playerPool.add("Draxler - PSG" + mi);
+		playerPool.add("Nainggolan - Cagliari" + mi);
+		playerPool.add("Goretzka - Bayern" + mi);
+		playerPool.add("Sissoko - Tottenham" + mi);
+		playerPool.add("Eriksen - AC Mailand" + mi);
+		
 		
 		// Verteidiger 
 		playerPool.add("Van Dijk - Liverpool" + ve);
@@ -172,7 +196,7 @@ public class MainFrame extends JFrame{
 		playerPool.add("Tah - Lervekusen" + ve);
 		playerPool.add("Süle - Bayern" + ve);
 		playerPool.add("Stones - Man City" + ve);
-		playerPool.add("Maguire" + ve);
+		playerPool.add("Maguire - Manchester United" + ve);
 		playerPool.add("Marcelo - Real Madrid" + ve);
 		playerPool.add("Robertson - Liverpool" + ve);
 		playerPool.add("Schulz - BVB" + ve);
@@ -181,6 +205,17 @@ public class MainFrame extends JFrame{
 		playerPool.add("Walker - Man City" + ve);
 		playerPool.add("Kimmich - Bayern" + ve);
 		playerPool.add("Danny Da Costa - Frankfurt" + ve);
+		playerPool.add("Telles - FC Porto" + ve);
+		playerPool.add("Alba - Barcelona" + ve);
+		playerPool.add("Alaba - Bayern" + ve);
+		playerPool.add("TAA - Liverpool" + ve);
+		playerPool.add("Semedo - Barcelona" + ve);
+		playerPool.add("Odriozola - Bayern" + ve);
+		playerPool.add("Silva - PSG" + ve);
+		playerPool.add("De Ligt - Juventus" + ve);
+		playerPool.add("Marquinhos - PSG" + ve);
+		playerPool.add("Godin - Inter Mailand" + ve);
+		playerPool.add("Nacho Fernandez - Real Madrid" + ve);
 		
 		
 		// TORWART
@@ -192,6 +227,16 @@ public class MainFrame extends JFrame{
 		playerPool.add("Ter Stegen - Barcerlona" + tw);
 		playerPool.add("Ederson - Man City" + tw);
 		playerPool.add("Allison - Liverpool" + tw);
+		playerPool.add("Oblak - Atletico Madrid" + tw);
+		playerPool.add("De Gea - Manchester United" + tw);
+		playerPool.add("Handanovic - Inter Mailand" + tw);
+		playerPool.add("Navas - PSG" + tw);
+		playerPool.add("Szczesny - Juventus" + tw);
+		playerPool.add("Donnarumma - AC Mailand" + tw);
+		playerPool.add("Gulacsi - RB Leipzig" + tw);
+		playerPool.add("Kepa - Chelsea" + tw);
+		playerPool.add("Hradecky - Leverkusen" + tw);
+		playerPool.add("Buffon - Juventus" + tw);
 		playerPool.add("Joker" + tw);
 	}
 	
