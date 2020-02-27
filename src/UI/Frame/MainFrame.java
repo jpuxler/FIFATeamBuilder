@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.MenuBar;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
@@ -61,6 +60,24 @@ public class MainFrame extends JFrame{
 		menuItem.addActionListener(e -> {
 			model_list_eins.clear();
 			model_list_zwei.clear();
+		});
+		menu.add(menuItem);
+		
+		menuItem = new JMenuItem("Liste aller Spieler");
+		final ArrayList<String> finalPool = playerPool;
+		menuItem.addActionListener(e -> {
+			JFrame list = new JFrame("Liste aller Spieler");
+			JPanel panel = new JPanel();
+			list.add(panel);
+			panel.setLayout(new GridLayout(finalPool.size(), 1));
+
+			for(String p : finalPool) {
+				panel.add(new JLabel(p));
+			}
+			
+			list.pack();
+			list.setResizable(false);
+			list.setVisible(true);
 		});
 		menu.add(menuItem);
 		
